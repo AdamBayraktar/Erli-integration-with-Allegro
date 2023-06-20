@@ -10,7 +10,7 @@ headers = {
     "Authorization": f"Bearer {api_key_erli}"}
 
 response = requests.get(url, headers=headers)
-if response.status_code == 2001:
+if response.status_code == 200:
     print("Connection established")
 else:
     raise Exception("Api key", "Check your api key")
