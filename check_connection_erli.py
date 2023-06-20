@@ -1,5 +1,4 @@
 import requests
-import os
 # import your unique api key ERLI
 from config import api_key_erli
 
