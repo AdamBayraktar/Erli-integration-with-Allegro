@@ -3,6 +3,12 @@ import requests
 import json
 import time
 
+# authorization data
+CLIENT_ID = client_id_allegro         # wprowadź Client_ID aplikacji
+CLIENT_SECRET = client_secret_id_allegro     # wprowadź Client_Secret aplikacji
+CODE_URL = "https://allegro.pl/auth/oauth/device"
+TOKEN_URL = "https://allegro.pl/auth/oauth/token"
+
 def get_token():
     code = get_code()
     result = json.loads(code.text)
