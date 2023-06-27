@@ -7,3 +7,5 @@ In this repository you can find all request that are need in order to take your 
 What you need:
 
 - unique erli api key for authorization 
+- Allegro CLIENT ID
+- Allegro CLIENT SECRET
