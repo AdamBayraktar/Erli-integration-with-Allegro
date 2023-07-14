@@ -49,7 +49,8 @@ def patch_product(UpdatedProduct):
 
 def create_txt(list_failed_ids, file_name="failed_ids.txt"):
     with open(file_name, "w") as f:
-        f.writelines(list_failed_ids)
+        for the_id in list_failed_ids:
+            f.write(the_id + '\n')
 
 
 if __name__ == "__main__":
