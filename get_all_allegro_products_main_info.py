@@ -36,8 +36,8 @@ def save_file_as_json(file, file_name):
 def all_products_id(access_token):
     all_products = []
     # max limit products per request is 1000 therefore divide by price to several requests to get all products
-    # all_products.extend(get_all_products(access_token, upper_price=10))
-    # all_products.extend(get_all_products(access_token, lower_price=10.01, upper_price=18))
+    all_products.extend(get_all_products(access_token, upper_price=10))
+    all_products.extend(get_all_products(access_token, lower_price=10.01, upper_price=18))
     all_products.extend(get_all_products(access_token, lower_price=18.01))
     return [product["id"] for product in all_products]
     
