@@ -6,6 +6,7 @@ import requests
 from config import api_key_erli
 import json
 
+# main code that is responsible for adding all products from allegro to erli
 def main():
     access_token = get_token()
     all_products, all_id = all_product_detail(access_token)
