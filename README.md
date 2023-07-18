@@ -21,3 +21,14 @@ What you need:
 - unique erli api key for authorization 
 - Allegro CLIENT ID
 - Allegro CLIENT SECRET
+
+
+***
+Step by step instruction:
+
+1. Create config.py
+2. In the file define variables:
+    - api_key_erli
+    - client_id_allegro
+    - client_secret_id_allegro
+3. 
