@@ -10,13 +10,13 @@ import json
 # code that is responsible for adding new products from allegro to erli
 def main():
     access_token = get_token()
-    # add text file with new products IDs
+    # convert text file of new IDs to the list
     new_id_list = convert_text_file_to_list("new_products.txt")
     new_products_allegro = []
     for id in new_id_list:
         new_products_allegro.append(get_product_details(access_token, id))
     # Update list of existing product IDs
-    # list of IDs that you update
+    # list of IDs that you use to update existing products on ERLI
     with open(f'list_of_product_id.txt', "a") as f:
         for id in new_id_list:
             f.write(str(id) + "\n")
