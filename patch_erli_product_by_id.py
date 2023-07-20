@@ -27,9 +27,12 @@ def main():
         response = patch_product(updated_product)
         if response.status_code != 202:
             list_failed_id.append(id)
-    # if there is any product failed to update
+    # if there is any product failed to update, wrtie them to the text file
     if list_failed_id:
         create_txt(list_failed_id)
+    # otherwise write success to it
+    else:
+        create_txt()
             
         
         
@@ -47,7 +50,7 @@ def patch_product(UpdatedProduct):
     response = requests.patch(url, headers=headers, json=data)
     return response
 
-def create_txt(list_failed_ids, file_name="failed_ids.txt"):
+def create_txt(list_failed_ids=["success"], file_name="failed_ids.txt"):
     with open(file_name, "w") as f:
         for the_id in list_failed_ids:
             f.write(the_id + '\n')
