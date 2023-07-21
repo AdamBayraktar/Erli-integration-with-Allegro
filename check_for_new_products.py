@@ -1,5 +1,3 @@
-import requests
-import json
 from get_access_token_allegro import get_token
 from get_all_allegro_products_main_info import all_products_id
 from convert_txt_to_list import convert_text_file_to_list
