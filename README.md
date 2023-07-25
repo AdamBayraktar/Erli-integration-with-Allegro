@@ -29,6 +29,10 @@ Step by step instruction:
 1. Create config.py
 2. In the file define variables:
     - api_key_erli
+        private API key - you must generate it in integration methods tab
     - client_id_allegro
+        client ID - in order to get these 2 allegro keys, you must create application in Allegro API and select type: device
     - client_secret_id_allegro
-3. 
+        client Secret
+3. Run check_connection_allegro.py and check_connection_erli.py - if tests passed then you may proceed to next step
+4. Open get_all_allegro_products_main_info.py
