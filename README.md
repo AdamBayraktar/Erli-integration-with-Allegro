@@ -36,3 +36,8 @@ Step by step instruction:
         client Secret
 3. Run check_connection_allegro.py and check_connection_erli.py - if tests passed then you may proceed to next step
 4. Open get_all_allegro_products_main_info.py
+    - remember that you can get maximum 1000 offers per one request
+    - adjust lower and upper prices in all_products_id function that you will get all your products
+    - if needed add another get_all_products function inside it
+    - for test purpose you can run this file and check output
+5.
