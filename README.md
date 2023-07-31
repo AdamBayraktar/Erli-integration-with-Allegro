@@ -40,4 +40,16 @@ Step by step instruction:
     - adjust lower and upper prices in all_products_id function that you will get all your products
     - if needed add another get_all_products function inside it
     - for test purpose you can run this file and check output
-5.
+5. Run get_all_allegro_products_detailed_info.py for test purpose
+6. Adding products from Allegro to Erli for THE FIRST TIME
+    - open add_all_product_erli.py
+    - For test purpose: add any letters before "title" variable in post product function. Example below:
+    ```
+    def post_product(data, title):
+        url = f'https://erli.pl/svc/shop-api/products/anyLetter{title}'
+    ```
+    - check the output in the console and also examine if offers were correctly added in the erli website
+    - if there is any error, examine the error message and then change the unique word/letter before "title" variable
+    - if offers were correctly, then archieve all offers from website, remove the unique word/letter before "title" variable, and finally run again add_all_product_erli.py
+    - IMPORTANT: make backup file of list_of_product_id.txt - you will use it to update existing offers
+7.
