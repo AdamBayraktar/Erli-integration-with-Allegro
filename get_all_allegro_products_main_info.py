@@ -1,5 +1,4 @@
 import requests
-import json
 from get_access_token_allegro import get_token
 
 requests.packages.urllib3.disable_warnings()
@@ -26,11 +25,6 @@ def get_all_products(access_token, lower_price=0, upper_price=1000, limit=1000):
     response = requests.get(url, headers=headers, params=params)
     return response.json()["offers"]
 
-
-def save_file_as_json(file, file_name):
-    json_object = json.dumps(file, indent=4)
-    with open(file_name, "w") as outfile:
-        outfile.write(json_object)
 
 # gets all user's products and return list of products id
 def all_products_id(access_token):
