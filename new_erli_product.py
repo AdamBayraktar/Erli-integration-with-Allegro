@@ -58,12 +58,12 @@ class NewErliProduct:
         })
         return data
 
-    def __get_price_in_grosze(self, price_zl):
+    def __get_price_in_grosze(self, price_zl: int | float) -> int:
         price_zl = float(price_zl)
         price_gr = int(price_zl * 100)
         return price_gr
             
-    def __add_description(self, allegro_description):
+    def __add_description(self, allegro_description: dict) -> str:
         erli_description = {"sections": allegro_description["sections"]}
         return erli_description
     
